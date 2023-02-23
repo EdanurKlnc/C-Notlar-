@@ -19,9 +19,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DizilerVeKoleksiyonlar", "D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Gün", "3.Gün", "{E873C784-1C67-4372-92D6-C9C295B4A776}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CokBoyutluDiziler", "CokBoyutluDiziler\CokBoyutluDiziler.csproj", "{1AD42EF5-11AB-47FF-B19E-E72D830F5DB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CokBoyutluDiziler", "CokBoyutluDiziler\CokBoyutluDiziler.csproj", "{1AD42EF5-11AB-47FF-B19E-E72D830F5DB4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MethodKullanımı", "MethodKullanımı\MethodKullanımı.csproj", "{3C7DAA55-B238-468B-947F-90639FE1205F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MethodKullanımı", "MethodKullanımı\MethodKullanımı.csproj", "{3C7DAA55-B238-468B-947F-90639FE1205F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.Gün", "4.Gün", "{8805700F-9F91-4109-A10A-3C00FD15D7E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OopGiris", "OopGiris\OopGiris.csproj", "{83CC3B8C-6BB7-416F-82C3-24D1527D95A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +61,10 @@ Global
 		{3C7DAA55-B238-468B-947F-90639FE1205F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C7DAA55-B238-468B-947F-90639FE1205F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C7DAA55-B238-468B-947F-90639FE1205F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83CC3B8C-6BB7-416F-82C3-24D1527D95A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83CC3B8C-6BB7-416F-82C3-24D1527D95A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83CC3B8C-6BB7-416F-82C3-24D1527D95A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83CC3B8C-6BB7-416F-82C3-24D1527D95A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +77,7 @@ Global
 		{A568B1F4-E151-4C4A-9F0A-56449EE1CDE6} = {3171DA32-CCDD-478E-9B65-F3D80F9EEE15}
 		{1AD42EF5-11AB-47FF-B19E-E72D830F5DB4} = {E873C784-1C67-4372-92D6-C9C295B4A776}
 		{3C7DAA55-B238-468B-947F-90639FE1205F} = {E873C784-1C67-4372-92D6-C9C295B4A776}
+		{83CC3B8C-6BB7-416F-82C3-24D1527D95A6} = {8805700F-9F91-4109-A10A-3C00FD15D7E5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {15B4EFE1-3878-43BF-9E15-16E860CECA76}
