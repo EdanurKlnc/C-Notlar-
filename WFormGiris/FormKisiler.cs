@@ -62,6 +62,7 @@
                 kisi.ToString();
                 //lstKisiler.DisplayMember = "Ad"; //Girilen adı ekrana yazdırma
                 lstKisiler.Items.Add(kisi);
+                FormuTemizle();
             }
 
             catch (Exception ex)
@@ -74,9 +75,12 @@
 
         }
 
-        private void şş(object sender, EventArgs e)
+        private void FormuTemizle(object sender, EventArgs e)
         {
-
+            foreach(Control item in this.Controls)
+            {
+                item.Text = String.Empty;
+            }
         }
     }
 }
