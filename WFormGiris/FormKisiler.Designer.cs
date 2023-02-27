@@ -33,12 +33,10 @@
             this.lblSoyad = new System.Windows.Forms.Label();
             this.lblTc = new System.Windows.Forms.Label();
             this.lblTelefon = new System.Windows.Forms.Label();
-            this.lblMail = new System.Windows.Forms.Label();
             this.txtAd = new System.Windows.Forms.TextBox();
             this.txtSoyad = new System.Windows.Forms.TextBox();
             this.txtTc = new System.Windows.Forms.TextBox();
             this.txtTelefonNo = new System.Windows.Forms.TextBox();
-            this.txtMail = new System.Windows.Forms.TextBox();
             this.btnKayit = new System.Windows.Forms.Button();
             this.lstKisiler = new System.Windows.Forms.ListBox();
             this.dtpDogumTarihi = new System.Windows.Forms.DateTimePicker();
@@ -60,7 +58,7 @@
             this.lblDogumTarihi.Location = new System.Drawing.Point(12, 84);
             this.lblDogumTarihi.Name = "lblDogumTarihi";
             this.lblDogumTarihi.Size = new System.Drawing.Size(84, 15);
-            this.lblDogumTarihi.TabIndex = 0;
+            this.lblDogumTarihi.TabIndex = 6;
             this.lblDogumTarihi.Text = "Doğum Tarihi :";
             this.lblDogumTarihi.Click += new System.EventHandler(this.label2_Click);
             // 
@@ -70,7 +68,7 @@
             this.lblSoyad.Location = new System.Drawing.Point(26, 57);
             this.lblSoyad.Name = "lblSoyad";
             this.lblSoyad.Size = new System.Drawing.Size(45, 15);
-            this.lblSoyad.TabIndex = 1;
+            this.lblSoyad.TabIndex = 2;
             this.lblSoyad.Text = "Soyad :";
             this.lblSoyad.Click += new System.EventHandler(this.label3_Click);
             // 
@@ -80,7 +78,7 @@
             this.lblTc.Location = new System.Drawing.Point(26, 115);
             this.lblTc.Name = "lblTc";
             this.lblTc.Size = new System.Drawing.Size(26, 15);
-            this.lblTc.TabIndex = 1;
+            this.lblTc.TabIndex = 8;
             this.lblTc.Text = "TC :";
             // 
             // lblTelefon
@@ -89,53 +87,37 @@
             this.lblTelefon.Location = new System.Drawing.Point(26, 144);
             this.lblTelefon.Name = "lblTelefon";
             this.lblTelefon.Size = new System.Drawing.Size(70, 15);
-            this.lblTelefon.TabIndex = 1;
+            this.lblTelefon.TabIndex = 12;
             this.lblTelefon.Text = "Telefon No :";
-            // 
-            // lblMail
-            // 
-            this.lblMail.AutoSize = true;
-            this.lblMail.Location = new System.Drawing.Point(26, 173);
-            this.lblMail.Name = "lblMail";
-            this.lblMail.Size = new System.Drawing.Size(39, 15);
-            this.lblMail.TabIndex = 1;
-            this.lblMail.Text = "Mail  :";
             // 
             // txtAd
             // 
             this.txtAd.Location = new System.Drawing.Point(98, 20);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(100, 23);
-            this.txtAd.TabIndex = 2;
+            this.txtAd.TabIndex = 1;
+            this.txtAd.TextChanged += new System.EventHandler(this.şş);
             // 
             // txtSoyad
             // 
             this.txtSoyad.Location = new System.Drawing.Point(98, 49);
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(100, 23);
-            this.txtSoyad.TabIndex = 2;
+            this.txtSoyad.TabIndex = 3;
             // 
             // txtTc
             // 
             this.txtTc.Location = new System.Drawing.Point(98, 107);
             this.txtTc.Name = "txtTc";
             this.txtTc.Size = new System.Drawing.Size(100, 23);
-            this.txtTc.TabIndex = 2;
+            this.txtTc.TabIndex = 9;
             // 
             // txtTelefonNo
             // 
             this.txtTelefonNo.Location = new System.Drawing.Point(98, 136);
             this.txtTelefonNo.Name = "txtTelefonNo";
             this.txtTelefonNo.Size = new System.Drawing.Size(100, 23);
-            this.txtTelefonNo.TabIndex = 2;
-            // 
-            // txtMail
-            // 
-            this.txtMail.Location = new System.Drawing.Point(98, 165);
-            this.txtMail.Name = "txtMail";
-            this.txtMail.Size = new System.Drawing.Size(100, 23);
-            this.txtMail.TabIndex = 2;
-            this.txtMail.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.txtTelefonNo.TabIndex = 13;
             // 
             // btnKayit
             // 
@@ -145,6 +127,7 @@
             this.btnKayit.TabIndex = 3;
             this.btnKayit.Text = "Kaydet";
             this.btnKayit.UseVisualStyleBackColor = true;
+            this.btnKayit.Click += new System.EventHandler(this.btnKayit_Click);
             // 
             // lstKisiler
             // 
@@ -161,7 +144,7 @@
             this.dtpDogumTarihi.Location = new System.Drawing.Point(98, 78);
             this.dtpDogumTarihi.Name = "dtpDogumTarihi";
             this.dtpDogumTarihi.Size = new System.Drawing.Size(100, 23);
-            this.dtpDogumTarihi.TabIndex = 5;
+            this.dtpDogumTarihi.TabIndex = 7;
             // 
             // FormKisiler
             // 
@@ -172,12 +155,10 @@
             this.Controls.Add(this.dtpDogumTarihi);
             this.Controls.Add(this.lstKisiler);
             this.Controls.Add(this.btnKayit);
-            this.Controls.Add(this.txtMail);
             this.Controls.Add(this.txtTelefonNo);
             this.Controls.Add(this.txtTc);
             this.Controls.Add(this.txtSoyad);
             this.Controls.Add(this.txtAd);
-            this.Controls.Add(this.lblMail);
             this.Controls.Add(this.lblTelefon);
             this.Controls.Add(this.lblTc);
             this.Controls.Add(this.lblSoyad);

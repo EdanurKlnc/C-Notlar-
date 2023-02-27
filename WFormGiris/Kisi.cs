@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿
+
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace WFormGiris
 {
@@ -24,7 +21,7 @@ namespace WFormGiris
         private string _tc; //sayısal bir ifadeyi işlemsel kullanmıyorsan int yerine string alabiliriz
         private string _tel;
         private DateTime _dogumTarihi;
-        private string _email;
+        // private string _email;
 
         public string Ad //property
         {
@@ -120,22 +117,26 @@ namespace WFormGiris
 
             }
         }
-        public string Email
-        {
-            get => _email;
-
-            set
+        /*    public string Email
             {
-                string emailRegEx = @"^[\w -\.] +@([\w -] +\.)+[\w -]{ 2,4}$";
-                if (!Regex.IsMatch(value, emailRegEx)) //Regex öze bir kütüphane
+                get => _email;
+
+                set
                 {
-                    throw new Exception("Geçerli bir mail adresi giriniz");
+                    string emailRegEx = @"^[\w -\.] +@([\w -] +\.)+[\w -]{ 2,4}$";
+                    if (!Regex.IsMatch(value, emailRegEx)) //Regex öze bir kütüphane
+                    {
+                        throw new Exception("Geçerli bir mail adresi giriniz");
 
+                    }
+                    _email = value;
                 }
-                _email = value;
-            }
+            }*/
+
+
+        public override string ToString()
+        {
+            return $"{this.Ad} {this.Soyad} - {this.Yas}";
         }
-
-
     }
 }
