@@ -75,12 +75,47 @@
 
         }
 
-        private void FormuTemizle(object sender, EventArgs e)
+        private void FormuTemizle()
         {
-            foreach(Control item in this.Controls)
+            foreach (Control item in this.Controls)
             {
-                item.Text = String.Empty;
+                if (item is TextBox)
+                    item.Text = String.Empty;
+                else if (item is DateTimePicker dPicker)
+                {
+                    // (item as DateTimePicker).Value = DateTime.Now;
+                    //((DateTimePicker)item).Value = DateTime.Now;
+                    dPicker.Value = DateTime.Now; //Yukarıdaki gibi dönüştürmek yerine bu şekilde yapabiliriz.
+                }
+                else if (item is CheckBox cBox)
+                {
+                    cBox.Checked = false;
+                }
+                else if (item is ComboBox combox)
+                {
+                    combox.SelectedIndex = -1;
+                }
+                else if (item is ListBox listBox)
+                {
+                    listBox.SelectedIndex = -1;
+                }
             }
+        }
+
+        //Çıktıya(listeye) tıkladığında bilgileri doldurma
+        private void lstKisiler_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lstKisiler.SelectedItem == null) return;
+
+            var seciliKisi = lstKisiler.SelectedItem as Kisi;
+
+            txtAd.Text = seciliKisi.Ad;
+            txtSoyad.Text = seciliKisi.Soyad;
+            txtTc.Text = seciliKisi.Tc;
+            txtTelefonNo.Text = seciliKisi.Tel;
+            dtpDogumTarihi.Value = seciliKisi.DogumTarihi;
+
+
         }
     }
 }

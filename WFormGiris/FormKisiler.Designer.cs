@@ -96,7 +96,6 @@
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(100, 23);
             this.txtAd.TabIndex = 1;
-            this.txtAd.TextChanged += new System.EventHandler(this.şş);
             // 
             // txtSoyad
             // 
@@ -137,6 +136,7 @@
             this.lstKisiler.Name = "lstKisiler";
             this.lstKisiler.Size = new System.Drawing.Size(157, 304);
             this.lstKisiler.TabIndex = 4;
+            this.lstKisiler.SelectedIndexChanged += new System.EventHandler(this.lstKisiler_SelectedIndexChanged);
             // 
             // dtpDogumTarihi
             // 
