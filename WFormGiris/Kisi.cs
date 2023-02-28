@@ -136,7 +136,7 @@ namespace WFormGiris
 
         public override string ToString()
         {
-            return $"{this.Ad} {this.Soyad} - {this.Yas}";
+            return $"{this.Ad} {this.Soyad} - {this.Yas} ";
         }
     }
 }

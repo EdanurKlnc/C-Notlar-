@@ -40,10 +40,11 @@
             this.txtTelefonNo = new System.Windows.Forms.TextBox();
             this.btnKayit = new System.Windows.Forms.Button();
             this.lstKisiler = new System.Windows.Forms.ListBox();
-            this.dtpDogumTarihi = new System.Windows.Forms.DateTimePicker();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.düzenleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.silToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.dtpDogumTarihi = new System.Windows.Forms.DateTimePicker();
+            this.güncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -144,27 +145,20 @@
             this.lstKisiler.TabIndex = 4;
             this.lstKisiler.SelectedIndexChanged += new System.EventHandler(this.lstKisiler_SelectedIndexChanged);
             // 
-            // dtpDogumTarihi
-            // 
-            this.dtpDogumTarihi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDogumTarihi.Location = new System.Drawing.Point(98, 78);
-            this.dtpDogumTarihi.Name = "dtpDogumTarihi";
-            this.dtpDogumTarihi.Size = new System.Drawing.Size(100, 23);
-            this.dtpDogumTarihi.TabIndex = 7;
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.düzenleToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(117, 26);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
             // 
             // düzenleToolStripMenuItem
             // 
             this.düzenleToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.silToolStripMenuItem1});
+            this.silToolStripMenuItem1,
+            this.güncelleToolStripMenuItem});
             this.düzenleToolStripMenuItem.Name = "düzenleToolStripMenuItem";
-            this.düzenleToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.düzenleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.düzenleToolStripMenuItem.Text = "Düzenle";
             // 
             // silToolStripMenuItem1
@@ -173,6 +167,18 @@
             this.silToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.silToolStripMenuItem1.Text = "Sil";
             this.silToolStripMenuItem1.Click += new System.EventHandler(this.silToolStripMenuItem1_Click);
+            // 
+            // dtpDogumTarihi
+            // 
+            this.dtpDogumTarihi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDogumTarihi.Location = new System.Drawing.Point(98, 78);
+            this.dtpDogumTarihi.Name = "dtpDogumTarihi";
+            this.dtpDogumTarihi.Size = new System.Drawing.Size(100, 23);
+            this.dtpDogumTarihi.TabIndex = 7;
+            // 
+            // güncelleToolStripMenuItem
+            // 
+           
             // 
             // FormKisiler
             // 
@@ -220,5 +226,6 @@
         private ContextMenuStrip contextMenuStrip1;
         private ToolStripMenuItem düzenleToolStripMenuItem;
         private ToolStripMenuItem silToolStripMenuItem1;
+        private ToolStripMenuItem güncelleToolStripMenuItem;
     }
 }

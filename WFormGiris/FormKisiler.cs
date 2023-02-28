@@ -35,42 +35,66 @@
 
         private void btnKayit_Click(object sender, EventArgs e)
         {
-            try
+            if (_seciliKisi == null)
             {
-                //1.Yöntem
-                /*
-                Kisi kisi = new Kisi();
-                kisi.Ad = txtAd.Text;
-                kisi.Soyad = txtSoyad.Text;
-                kisi.Tc = txtTc.Text;
-                kisi.DogumTarihi = dtpDogumTarihi.Value;
-                kisi.Tel = txtTelefonNo.Text;
-                kisi.Email = txtMail.Text; */
-
-
-                //2.Yöntem Object Initializer
-                Kisi kisi = new Kisi()
+                try
                 {
-                    Ad = txtAd.Text,
-                    Soyad = txtSoyad.Text,
-                    DogumTarihi = dtpDogumTarihi.Value,
-                    //Email = txtMail.Text,
-                    Tel = txtTelefonNo.Text,
-                    Tc = txtTc.Text
-                };
+                    //1.Yöntem
+                    /*
+                    Kisi kisi = new Kisi();
+                    kisi.Ad = txtAd.Text;
+                    kisi.Soyad = txtSoyad.Text;
+                    kisi.Tc = txtTc.Text;
+                    kisi.DogumTarihi = dtpDogumTarihi.Value;
+                    kisi.Tel = txtTelefonNo.Text;
+                    kisi.Email = txtMail.Text; */
 
-                kisi.ToString();
-                //lstKisiler.DisplayMember = "Ad"; //Girilen adı ekrana yazdırma
-                lstKisiler.Items.Add(kisi);
-                FormuTemizle();
+
+                    //2.Yöntem Object Initializer
+                    Kisi kisi = new Kisi()
+                    {
+                        Ad = txtAd.Text,
+                        Soyad = txtSoyad.Text,
+                        DogumTarihi = dtpDogumTarihi.Value,
+                        //Email = txtMail.Text,
+                        Tel = txtTelefonNo.Text,
+                        Tc = txtTc.Text
+                    };
+
+                    kisi.ToString();
+                    //lstKisiler.DisplayMember = "Ad"; //Girilen adı ekrana yazdırma
+                    lstKisiler.Items.Add(kisi);
+                    FormuTemizle();
+                }
+
+                catch (Exception ex)
+                {
+                    // $=iki string birleştirirken + yerine kullanılır
+                    MessageBox.Show($"Bir hata oluştu!!!! {ex.Message}");
+
+                }
             }
-
-            catch (Exception ex)
+            else
             {
-                // $=iki string birleştirirken + yerine kullanılır
-                MessageBox.Show($"Bir hata oluştu!!!! {ex.Message}");
+                try
+                {
+                    //Güncelleme işlemi
+                    _seciliKisi.Ad = txtAd.Text;
+                    _seciliKisi.Soyad = txtSoyad.Text;
+                    _seciliKisi.Tel = txtTelefonNo.Text;
+                    _seciliKisi.Tc = txtTc.Text;
+                    _seciliKisi.DogumTarihi = dtpDogumTarihi.Value;
+                    FormuTemizle();
+                    btnKayit.Text = "Kaydet";
+                    _seciliKisi = null;
+                }
+                catch (Exception ex )
+                {
+                    MessageBox.Show($"Bir hata oluştu!!!! {ex.Message}");
 
+                }
             }
+
 
 
         }
@@ -98,25 +122,31 @@
                 else if (item is ListBox listBox)
                 {
                     listBox.SelectedIndex = -1;
+                    _seciliKisi = null;
                 }
             }
         }
-
+        private List<Kisi> _kisiler = new List<Kisi>();
+        private Kisi? _seciliKisi;
         //Çıktıya(listeye) tıkladığında bilgileri doldurma
         private void lstKisiler_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (lstKisiler.SelectedItem == null) return;
+            if (lstKisiler.SelectedItem == null)
+            {
+                _seciliKisi = null;
+                return;
+            }
 
-            var seciliKisi = lstKisiler.SelectedItem as Kisi;
+            _seciliKisi = lstKisiler.SelectedItem as Kisi;
 
-            txtAd.Text = seciliKisi.Ad;
-            txtSoyad.Text = seciliKisi.Soyad;
-            txtTc.Text = seciliKisi.Tc;
-            txtTelefonNo.Text = seciliKisi.Tel;
-            dtpDogumTarihi.Value = seciliKisi.DogumTarihi;
+            txtAd.Text = _seciliKisi.Ad;
+            txtSoyad.Text = _seciliKisi.Soyad;
+            txtTc.Text = _seciliKisi.Tc;
+            txtTelefonNo.Text = _seciliKisi.Tel;
+            dtpDogumTarihi.Value = _seciliKisi.DogumTarihi;
 
-
-        }
+            btnKayit.Text = "Güncelle";
+   }
 
         // Kişiyi düzenle/sil
         private void silToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -132,5 +162,7 @@
                 FormuTemizle();
             }
         }
+
+
     }
 }
