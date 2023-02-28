@@ -43,8 +43,9 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.düzenleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.silToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.dtpDogumTarihi = new System.Windows.Forms.DateTimePicker();
             this.güncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dtpDogumTarihi = new System.Windows.Forms.DateTimePicker();
+            this.txtAra = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -139,9 +140,9 @@
             this.lstKisiler.ContextMenuStrip = this.contextMenuStrip1;
             this.lstKisiler.FormattingEnabled = true;
             this.lstKisiler.ItemHeight = 15;
-            this.lstKisiler.Location = new System.Drawing.Point(300, 12);
+            this.lstKisiler.Location = new System.Drawing.Point(300, 57);
             this.lstKisiler.Name = "lstKisiler";
-            this.lstKisiler.Size = new System.Drawing.Size(157, 304);
+            this.lstKisiler.Size = new System.Drawing.Size(157, 259);
             this.lstKisiler.TabIndex = 4;
             this.lstKisiler.SelectedIndexChanged += new System.EventHandler(this.lstKisiler_SelectedIndexChanged);
             // 
@@ -150,7 +151,7 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.düzenleToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(117, 26);
             // 
             // düzenleToolStripMenuItem
             // 
@@ -158,15 +159,20 @@
             this.silToolStripMenuItem1,
             this.güncelleToolStripMenuItem});
             this.düzenleToolStripMenuItem.Name = "düzenleToolStripMenuItem";
-            this.düzenleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.düzenleToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.düzenleToolStripMenuItem.Text = "Düzenle";
             // 
             // silToolStripMenuItem1
             // 
             this.silToolStripMenuItem1.Name = "silToolStripMenuItem1";
-            this.silToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.silToolStripMenuItem1.Size = new System.Drawing.Size(86, 22);
             this.silToolStripMenuItem1.Text = "Sil";
             this.silToolStripMenuItem1.Click += new System.EventHandler(this.silToolStripMenuItem1_Click);
+            // 
+            // güncelleToolStripMenuItem
+            // 
+            this.güncelleToolStripMenuItem.Name = "güncelleToolStripMenuItem";
+            this.güncelleToolStripMenuItem.Size = new System.Drawing.Size(86, 22);
             // 
             // dtpDogumTarihi
             // 
@@ -176,9 +182,13 @@
             this.dtpDogumTarihi.Size = new System.Drawing.Size(100, 23);
             this.dtpDogumTarihi.TabIndex = 7;
             // 
-            // güncelleToolStripMenuItem
+            // txtAra
             // 
-           
+            this.txtAra.Location = new System.Drawing.Point(300, 20);
+            this.txtAra.Name = "txtAra";
+            this.txtAra.Size = new System.Drawing.Size(157, 23);
+            this.txtAra.TabIndex = 14;
+            this.txtAra.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtAra_KeyUp);
             // 
             // FormKisiler
             // 
@@ -186,6 +196,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtAra);
             this.Controls.Add(this.dtpDogumTarihi);
             this.Controls.Add(this.lstKisiler);
             this.Controls.Add(this.btnKayit);
@@ -227,5 +238,6 @@
         private ToolStripMenuItem düzenleToolStripMenuItem;
         private ToolStripMenuItem silToolStripMenuItem1;
         private ToolStripMenuItem güncelleToolStripMenuItem;
+        private TextBox txtAra;
     }
 }

@@ -63,7 +63,9 @@
 
                     kisi.ToString();
                     //lstKisiler.DisplayMember = "Ad"; //Girilen adı ekrana yazdırma
-                    lstKisiler.Items.Add(kisi);
+                    //lstKisiler.Items.Add(kisi);
+                    _kisiler.Remove(kisi);
+                    lstKisiler.DataSource = _kisiler;
                     FormuTemizle();
                 }
 
@@ -87,8 +89,10 @@
                     FormuTemizle();
                     btnKayit.Text = "Kaydet";
                     _seciliKisi = null;
+                    lstKisiler.DataSource = null;
+                    lstKisiler.DataSource = _kisiler;
                 }
-                catch (Exception ex )
+                catch (Exception ex)
                 {
                     MessageBox.Show($"Bir hata oluştu!!!! {ex.Message}");
 
@@ -146,7 +150,7 @@
             dtpDogumTarihi.Value = _seciliKisi.DogumTarihi;
 
             btnKayit.Text = "Güncelle";
-   }
+        }
 
         // Kişiyi düzenle/sil
         private void silToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -158,11 +162,29 @@
 
             if (result == DialogResult.Yes)
             {
-                lstKisiler.Items.Remove(seciliKisi);
+                //  lstKisiler.Items.Remove(seciliKisi);
+                _kisiler.Remove(seciliKisi);
+                lstKisiler.DataSource = _kisiler;
                 FormuTemizle();
             }
         }
 
+        private void txtAra_KeyUp(object sender, KeyEventArgs e)
+        {
+            string arama= txtAra.Text.ToLower();
+            /*
+            List<Kisi> souc = new List<Kisi>();
+            foreach( Kisi item in _kisiler)
+            {
+                if (item.Ad.ToLower().Contains(arama) || item.Soyad.ToLower().Contains(arama) )
+                    sonuc.add(item);
+            }
+            lstKisiler.DataSource = null;
+            lstKisiler.DataSource = sonuc; */
 
+          
+            
+
+        }
     }
 }
