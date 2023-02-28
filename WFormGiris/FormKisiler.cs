@@ -111,12 +111,26 @@
 
             txtAd.Text = seciliKisi.Ad;
             txtSoyad.Text = seciliKisi.Soyad;
-
             txtTc.Text = seciliKisi.Tc;
             txtTelefonNo.Text = seciliKisi.Tel;
             dtpDogumTarihi.Value = seciliKisi.DogumTarihi;
 
 
+        }
+
+        // Kişiyi düzenle/sil
+        private void silToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (lstKisiler.SelectedItem == null) return;
+
+            var seciliKisi = lstKisiler.SelectedItem as Kisi;
+            DialogResult result = MessageBox.Show($"{seciliKisi.Ad} {seciliKisi.Soyad} kişisini silmek istiyor musunuz ", "Silme Onayı", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                lstKisiler.Items.Remove(seciliKisi);
+                FormuTemizle();
+            }
         }
     }
 }
