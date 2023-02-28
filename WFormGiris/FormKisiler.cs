@@ -111,6 +111,7 @@
 
             txtAd.Text = seciliKisi.Ad;
             txtSoyad.Text = seciliKisi.Soyad;
+
             txtTc.Text = seciliKisi.Tc;
             txtTelefonNo.Text = seciliKisi.Tel;
             dtpDogumTarihi.Value = seciliKisi.DogumTarihi;
