@@ -2,11 +2,10 @@
 namespace Kalitim.Lib
 {
     // DikUcgen sınıfından alıtım vermek istemediğimiz için sealde keywordu ekledik
-    public sealed class DikUcgen : Dikdörtgen 
+    public sealed class DikUcgen : Dikdörtgen
     {
-       
         public DikUcgen() { }
-        public DikUcgen(int x, int y) : base(x,y)
+        public DikUcgen(int x, int y) : base(x, y)
         {
             this.Y = Y;
         }
