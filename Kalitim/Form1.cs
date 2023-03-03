@@ -1,5 +1,4 @@
 using Kalitim.Lib;
-
   //Poliformizm => Görünüþleri ayný çalýþma bicimleri farklý olan 
 
 namespace Kalitim
