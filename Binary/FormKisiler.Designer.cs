@@ -46,14 +46,17 @@
             this.güncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dtpDogumTarihi = new System.Windows.Forms.DateTimePicker();
             this.txtAra = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.dosyaAc = new System.Windows.Forms.OpenFileDialog();
             this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblAd
             // 
             this.lblAd.AutoSize = true;
-            this.lblAd.Location = new System.Drawing.Point(63, 28);
+            this.lblAd.Location = new System.Drawing.Point(26, 28);
             this.lblAd.Name = "lblAd";
             this.lblAd.Size = new System.Drawing.Size(28, 15);
             this.lblAd.TabIndex = 0;
@@ -63,7 +66,7 @@
             // lblDogumTarihi
             // 
             this.lblDogumTarihi.AutoSize = true;
-            this.lblDogumTarihi.Location = new System.Drawing.Point(7, 84);
+            this.lblDogumTarihi.Location = new System.Drawing.Point(12, 84);
             this.lblDogumTarihi.Name = "lblDogumTarihi";
             this.lblDogumTarihi.Size = new System.Drawing.Size(84, 15);
             this.lblDogumTarihi.TabIndex = 6;
@@ -73,7 +76,7 @@
             // lblSoyad
             // 
             this.lblSoyad.AutoSize = true;
-            this.lblSoyad.Location = new System.Drawing.Point(46, 57);
+            this.lblSoyad.Location = new System.Drawing.Point(26, 57);
             this.lblSoyad.Name = "lblSoyad";
             this.lblSoyad.Size = new System.Drawing.Size(45, 15);
             this.lblSoyad.TabIndex = 2;
@@ -83,7 +86,7 @@
             // lblTc
             // 
             this.lblTc.AutoSize = true;
-            this.lblTc.Location = new System.Drawing.Point(65, 115);
+            this.lblTc.Location = new System.Drawing.Point(26, 115);
             this.lblTc.Name = "lblTc";
             this.lblTc.Size = new System.Drawing.Size(26, 15);
             this.lblTc.TabIndex = 8;
@@ -92,7 +95,7 @@
             // lblTelefon
             // 
             this.lblTelefon.AutoSize = true;
-            this.lblTelefon.Location = new System.Drawing.Point(21, 144);
+            this.lblTelefon.Location = new System.Drawing.Point(26, 144);
             this.lblTelefon.Name = "lblTelefon";
             this.lblTelefon.Size = new System.Drawing.Size(70, 15);
             this.lblTelefon.TabIndex = 12;
@@ -102,35 +105,35 @@
             // 
             this.txtAd.Location = new System.Drawing.Point(98, 20);
             this.txtAd.Name = "txtAd";
-            this.txtAd.Size = new System.Drawing.Size(141, 23);
+            this.txtAd.Size = new System.Drawing.Size(145, 23);
             this.txtAd.TabIndex = 1;
             // 
             // txtSoyad
             // 
             this.txtSoyad.Location = new System.Drawing.Point(98, 49);
             this.txtSoyad.Name = "txtSoyad";
-            this.txtSoyad.Size = new System.Drawing.Size(141, 23);
+            this.txtSoyad.Size = new System.Drawing.Size(145, 23);
             this.txtSoyad.TabIndex = 3;
             // 
             // txtTc
             // 
             this.txtTc.Location = new System.Drawing.Point(98, 107);
             this.txtTc.Name = "txtTc";
-            this.txtTc.Size = new System.Drawing.Size(141, 23);
+            this.txtTc.Size = new System.Drawing.Size(145, 23);
             this.txtTc.TabIndex = 9;
             // 
             // txtTelefonNo
             // 
             this.txtTelefonNo.Location = new System.Drawing.Point(98, 136);
             this.txtTelefonNo.Name = "txtTelefonNo";
-            this.txtTelefonNo.Size = new System.Drawing.Size(141, 23);
+            this.txtTelefonNo.Size = new System.Drawing.Size(145, 23);
             this.txtTelefonNo.TabIndex = 13;
             // 
             // btnKayit
             // 
             this.btnKayit.Location = new System.Drawing.Point(98, 270);
             this.btnKayit.Name = "btnKayit";
-            this.btnKayit.Size = new System.Drawing.Size(141, 46);
+            this.btnKayit.Size = new System.Drawing.Size(145, 46);
             this.btnKayit.TabIndex = 3;
             this.btnKayit.Text = "Kaydet";
             this.btnKayit.UseVisualStyleBackColor = true;
@@ -153,7 +156,6 @@
             this.düzenleToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(117, 26);
-            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // düzenleToolStripMenuItem
             // 
@@ -181,7 +183,7 @@
             this.dtpDogumTarihi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDogumTarihi.Location = new System.Drawing.Point(98, 78);
             this.dtpDogumTarihi.Name = "dtpDogumTarihi";
-            this.dtpDogumTarihi.Size = new System.Drawing.Size(141, 23);
+            this.dtpDogumTarihi.Size = new System.Drawing.Size(145, 23);
             this.dtpDogumTarihi.TabIndex = 7;
             this.dtpDogumTarihi.ValueChanged += new System.EventHandler(this.dtpDogumTarihi_ValueChanged);
             // 
@@ -194,10 +196,27 @@
             this.txtAra.TextChanged += new System.EventHandler(this.txtAra_TextChanged);
             this.txtAra.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtAra_KeyUp);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(98, 165);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(145, 99);
+            this.pictureBox2.TabIndex = 16;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(33, 224);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 15);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Fotoğraf :";
+            // 
             // dosyaAc
             // 
             this.dosyaAc.FileName = "dosya";
-            this.dosyaAc.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
             // FormKisiler
             // 
@@ -205,6 +224,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.txtAra);
             this.Controls.Add(this.dtpDogumTarihi);
             this.Controls.Add(this.lstKisiler);
@@ -222,6 +243,7 @@
             this.Text = "FormKisiler";
             this.Load += new System.EventHandler(this.FormKisiler_Load);
             this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,6 +270,8 @@
         private ToolStripMenuItem silToolStripMenuItem1;
         private ToolStripMenuItem güncelleToolStripMenuItem;
         private TextBox txtAra;
+        private PictureBox pictureBox2;
+        private Label label1;
         private OpenFileDialog dosyaAc;
     }
 }

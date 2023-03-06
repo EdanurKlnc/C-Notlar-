@@ -98,6 +98,9 @@
 
                 }
             }
+
+
+
         }
 
         private void FormuTemizle()
@@ -178,13 +181,17 @@
             }
             lstKisiler.DataSource = null;
             lstKisiler.DataSource = sonuc; */
-
-
-
-
         }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            dosyaAc.Title = "Bir fotoğraf dosyası seçiniz";
+            dosyaAc.Filter = "JPG Dosyaları (*.jpg)|*.jpg";
+            dosyaAc.FileName = string.Empty;
+            dosyaAc.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop); //bilgisayardaki yere erişim
 
+            dosyaAc.ShowDialog();
+        }
         private void txtAra_TextChanged(object sender, EventArgs e)
         {
 
@@ -194,16 +201,5 @@
         {
 
         }
-
-        private void contextMenuStrip1_Opening(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-
-        }
-
-        private void openFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-
-        }
-
     }
 }
