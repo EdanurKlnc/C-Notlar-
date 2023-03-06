@@ -14,6 +14,7 @@ namespace StatikNesneler
         //1.yöntem
         public static SingletonDeneme GetInstance()
         {
+            // return _singletonDeneme ??= new SingletonDeneme(); alttaki ifin başka kullanımı 
             if (_singletonDeneme == null)
                 _singletonDeneme = new SingletonDeneme();
             return _singletonDeneme;
