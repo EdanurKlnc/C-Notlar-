@@ -142,6 +142,7 @@ namespace WFormGiris
         }
         private List<Kisi> _kisiler = new List<Kisi>();
         private Kisi? _seciliKisi;
+
         //Çıktıya(listeye) tıkladığında bilgileri doldurma
         private void lstKisiler_SelectedIndexChanged(object sender, EventArgs e)
         {
