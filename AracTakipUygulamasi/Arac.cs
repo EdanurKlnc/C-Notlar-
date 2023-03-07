@@ -14,7 +14,7 @@ namespace AracTakipUygulamasi
 
         public override string ToString()
         {
-            return $"{this.Marka}";
+            return $"Marka : {this.Marka}, Model :{this.Model}, Model Yılı : {this.ModelYili}";
         }
     }
 }

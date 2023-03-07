@@ -54,8 +54,8 @@
             this.textBoxModelyili = new System.Windows.Forms.TextBox();
             this.textBoxSaseNo = new System.Windows.Forms.TextBox();
             this.pctBoxAracFoto = new System.Windows.Forms.PictureBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.dosyaAc = new System.Windows.Forms.OpenFileDialog();
+            this.dosyaKaydet = new System.Windows.Forms.SaveFileDialog();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctBoxAracFoto)).BeginInit();
             this.SuspendLayout();
@@ -285,13 +285,13 @@
             this.pctBoxAracFoto.TabStop = false;
             this.pctBoxAracFoto.Click += new System.EventHandler(this.pctBoxAracFoto_Click);
             // 
-            // openFileDialog1
+            // dosyaAc
             // 
-            this.openFileDialog1.FileName = "dosya";
+            this.dosyaAc.FileName = "dosya";
             // 
-            // saveFileDialog1
+            // dosyaKaydet
             // 
-            this.saveFileDialog1.FileName = "dosyaKaydet";
+            this.dosyaKaydet.FileName = "dosyaKaydet";
             // 
             // Form1
             // 
@@ -356,7 +356,7 @@
         private TextBox textBoxModelyili;
         private TextBox textBoxSaseNo;
         private PictureBox pctBoxAracFoto;
-        private OpenFileDialog openFileDialog1;
-        private SaveFileDialog saveFileDialog1;
+        private OpenFileDialog dosyaAc;
+        private SaveFileDialog dosyaKaydet;
     }
 }
