@@ -1,4 +1,6 @@
-﻿namespace WFormGiris
+﻿using System.Xml.Serialization;
+
+namespace WFormGiris
 {
     public partial class FormKisiler : Form
     {
@@ -58,10 +60,16 @@
                         DogumTarihi = dtpDogumTarihi.Value,
                         //Email = txtMail.Text,
                         Tel = txtTelefonNo.Text,
-                        Tc = txtTc.Text
+                        Tc = txtTc.Text,
+                       
                     };
+                    if(_memoryStream.Length > 0)
+                    {
+                        kisi.Fotograf = _memoryStream.ToArray();
 
-                    kisi.ToString();
+                    }
+                    _memoryStream = new MemoryStream();
+
                     //lstKisiler.DisplayMember = "Ad"; //Girilen adı ekrana yazdırma
                     //lstKisiler.Items.Add(kisi);
                     _kisiler.Add(kisi);
@@ -86,6 +94,11 @@
                     _seciliKisi.Tel = txtTelefonNo.Text;
                     _seciliKisi.Tc = txtTc.Text;
                     _seciliKisi.DogumTarihi = dtpDogumTarihi.Value;
+                    if (_memoryStream.Length > 0)
+                    {
+                        _seciliKisi.Fotograf = _memoryStream.ToArray();
+
+                    }
                     FormuTemizle();
                     btnKayit.Text = "Kaydet";
                     _seciliKisi = null;
@@ -98,9 +111,6 @@
 
                 }
             }
-
-
-
         }
 
         private void FormuTemizle()
@@ -148,6 +158,7 @@
             txtTc.Text = _seciliKisi.Tc;
             txtTelefonNo.Text = _seciliKisi.Tel;
             dtpDogumTarihi.Value = _seciliKisi.DogumTarihi;
+            pictureBox2.Image = _seciliKisi.Fotograf != null ? Image.FromStream(new MemoryStream(_seciliKisi.Fotograf)) : null;
 
             btnKayit.Text = "Güncelle";
         }
@@ -183,6 +194,10 @@
             lstKisiler.DataSource = sonuc; */
         }
 
+        private MemoryStream _memoryStream = new MemoryStream(); //Ram
+        private int _bufeerSize = 64;
+        private byte[] _photoBytes = new byte[64];
+
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             dosyaAc.Title = "Bir fotoğraf dosyası seçiniz";
@@ -190,7 +205,22 @@
             dosyaAc.FileName = string.Empty;
             dosyaAc.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop); //bilgisayardaki yere erişim
 
-            dosyaAc.ShowDialog();
+            if (dosyaAc.ShowDialog() == DialogResult.OK)
+            {
+                FileStream fileStream = new FileStream(dosyaAc.FileName, FileMode.Open);
+                while (fileStream.Read(_photoBytes, 0, _bufeerSize) != 0)
+                {
+                    _memoryStream.Write(_photoBytes, 0, _bufeerSize);
+                }
+                fileStream.Close();
+                fileStream.Dispose(); //temizle
+
+                // pictureBox2.Image = Image.FromStream(_memoryStream);
+                pictureBox2.Image = new Bitmap(_memoryStream); //Yukarıdak ile aynı işlevde 
+
+
+            }
+            //dosyaAc.ShowDialog();
         }
         private void txtAra_TextChanged(object sender, EventArgs e)
         {
@@ -200,6 +230,24 @@
         private void dtpDogumTarihi_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dışarıAktarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //XML
+            dosyaKaydet.Title = "Kişileri xml olarak kaydet";
+            dosyaKaydet.Filter = "xml";
+            dosyaKaydet.FileName = "kişiler.xml";
+            dosyaKaydet.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            if(dosyaKaydet.ShowDialog() == DialogResult.OK)
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(List<Kisi>));
+                TextWriter textWriter = new StreamWriter(dosyaKaydet.FileName);
+                serializer.Serialize(textWriter, _kisiler);
+                textWriter.Close();
+                textWriter.Dispose();
+                MessageBox.Show($": {dosyaKaydet.FileName}");
+            }
         }
     }
 }
