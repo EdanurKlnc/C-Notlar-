@@ -250,5 +250,10 @@ namespace WFormGiris
                 MessageBox.Show($": {dosyaKaydet.FileName}");
             }
         }
+
+        private void contextMenuStrip1_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
+        }
     }
 }

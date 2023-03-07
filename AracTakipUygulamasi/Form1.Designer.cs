@@ -44,7 +44,7 @@
             this.textBoxMotorHacmi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblFotograf = new System.Windows.Forms.Label();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cmsSil = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.düzenleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ekleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.silToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,7 +56,7 @@
             this.pctBoxAracFoto = new System.Windows.Forms.PictureBox();
             this.dosyaAc = new System.Windows.Forms.OpenFileDialog();
             this.dosyaKaydet = new System.Windows.Forms.SaveFileDialog();
-            this.contextMenuStrip1.SuspendLayout();
+            this.cmsSil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctBoxAracFoto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -152,6 +152,7 @@
             this.textBoxMarka.Size = new System.Drawing.Size(159, 23);
             this.textBoxMarka.TabIndex = 7;
             this.textBoxMarka.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBoxMarka.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.textBoxMarka_ControlRemoved);
             // 
             // textBoxModel
             // 
@@ -204,13 +205,12 @@
             this.lblFotograf.TabIndex = 14;
             this.lblFotograf.Text = "Araç Fotoğrafı Eklemek İçin Tıklayınız";
             // 
-            // contextMenuStrip1
+            // cmsSil
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmsSil.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.düzenleToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
-            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
+            this.cmsSil.Name = "contextMenuStrip1";
+            this.cmsSil.Size = new System.Drawing.Size(181, 48);
             // 
             // düzenleToolStripMenuItem
             // 
@@ -221,6 +221,7 @@
             this.düzenleToolStripMenuItem.Name = "düzenleToolStripMenuItem";
             this.düzenleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.düzenleToolStripMenuItem.Text = "Düzenle";
+            this.düzenleToolStripMenuItem.Click += new System.EventHandler(this.düzenleToolStripMenuItem_Click);
             // 
             // ekleToolStripMenuItem
             // 
@@ -244,12 +245,14 @@
             // lstBoxListe
             // 
             this.lstBoxListe.BackColor = System.Drawing.Color.White;
+            this.lstBoxListe.ContextMenuStrip = this.cmsSil;
             this.lstBoxListe.FormattingEnabled = true;
             this.lstBoxListe.ItemHeight = 15;
             this.lstBoxListe.Location = new System.Drawing.Point(633, 101);
             this.lstBoxListe.Name = "lstBoxListe";
             this.lstBoxListe.Size = new System.Drawing.Size(257, 169);
             this.lstBoxListe.TabIndex = 15;
+            this.lstBoxListe.SelectedIndexChanged += new System.EventHandler(this.lstBoxListe_SelectedIndexChanged);
             // 
             // lblModelYili
             // 
@@ -325,7 +328,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.contextMenuStrip1.ResumeLayout(false);
+            this.cmsSil.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pctBoxAracFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -348,7 +351,7 @@
         private TextBox textBoxMotorHacmi;
         private Label label1;
         private Label lblFotograf;
-        private ContextMenuStrip contextMenuStrip1;
+        private ContextMenuStrip cmsSil;
         private ToolStripMenuItem düzenleToolStripMenuItem;
         private ToolStripMenuItem ekleToolStripMenuItem;
         private ToolStripMenuItem silToolStripMenuItem;
