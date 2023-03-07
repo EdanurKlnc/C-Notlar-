@@ -43,7 +43,11 @@ namespace AracTakipUygulamasi
                     _arac.Marka = textBoxMarka.Text;
                     _arac.Model = textBoxModel.Text;
                     _arac.ModelYili = textBoxModelyili.Text;
-                    _arac.MotorHacmi= 
+                    _arac.YakitTipi = textBoxYakitTipi.Text;
+                    _arac.MotorHacmi = textBoxMotorHacmi.Text;
+                    _arac.VitesTipi = textBoxVites.Text;
+                    _arac.SaseNo = textBoxSaseNo.Text;
+
 
                 }
                 catch
@@ -110,13 +114,6 @@ namespace AracTakipUygulamasi
         }
 
 
-
-
-
-
-
-
-
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -137,5 +134,20 @@ namespace AracTakipUygulamasi
 
         }
 
+        private void silToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (lstBoxListe.SelectedItem == null) return;
+
+            var seciliArac = lstBoxListe.SelectedItem as Arac;
+            DialogResult result = MessageBox.Show($"{seciliArac.Model} aracýný silmek istiyor musunuz ", "Silme Onayý", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                //  lstKisiler.Items.Remove(seciliKisi);
+                _araclar.Remove(seciliArac);
+                lstBoxListe.DataSource = _araclar;
+                FormuTemizle();
+            }
+        }
     }
 }

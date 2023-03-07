@@ -209,7 +209,7 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.düzenleToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(117, 26);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // düzenleToolStripMenuItem
@@ -219,25 +219,26 @@
             this.silToolStripMenuItem,
             this.güncelleToolStripMenuItem});
             this.düzenleToolStripMenuItem.Name = "düzenleToolStripMenuItem";
-            this.düzenleToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.düzenleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.düzenleToolStripMenuItem.Text = "Düzenle";
             // 
             // ekleToolStripMenuItem
             // 
             this.ekleToolStripMenuItem.Name = "ekleToolStripMenuItem";
-            this.ekleToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.ekleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ekleToolStripMenuItem.Text = "Ekle";
             // 
             // silToolStripMenuItem
             // 
             this.silToolStripMenuItem.Name = "silToolStripMenuItem";
-            this.silToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.silToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.silToolStripMenuItem.Text = "Sil";
+            this.silToolStripMenuItem.Click += new System.EventHandler(this.silToolStripMenuItem_Click);
             // 
             // güncelleToolStripMenuItem
             // 
             this.güncelleToolStripMenuItem.Name = "güncelleToolStripMenuItem";
-            this.güncelleToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.güncelleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.güncelleToolStripMenuItem.Text = "Güncelle";
             // 
             // lstBoxListe
@@ -281,6 +282,7 @@
             this.pctBoxAracFoto.Location = new System.Drawing.Point(348, 101);
             this.pctBoxAracFoto.Name = "pctBoxAracFoto";
             this.pctBoxAracFoto.Size = new System.Drawing.Size(267, 167);
+            this.pctBoxAracFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctBoxAracFoto.TabIndex = 12;
             this.pctBoxAracFoto.TabStop = false;
             this.pctBoxAracFoto.Click += new System.EventHandler(this.pctBoxAracFoto_Click);
