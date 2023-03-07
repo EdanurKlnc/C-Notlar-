@@ -141,7 +141,49 @@ namespace AracTakipUygulamasi
             }
         }
 
-        private void güncelleToolStripMenuItem_Click(object sender, EventArgs e)
+      
+        private void lstBoxListe_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lstBoxListe.SelectedItem == null)
+            {
+                _arac = null;
+                return;
+            }
+
+            _arac = lstBoxListe.SelectedItem as Arac;
+
+            textBoxModel.Text = _arac.Model;
+            textBoxMarka.Text = _arac.Marka;
+            textBoxModelyili.Text = _arac.ModelYili;
+            textBoxMotorHacmi.Text = _arac.MotorHacmi;
+            textBoxSaseNo.Text = _arac.SaseNo;
+            textBoxVites.Text = _arac.VitesTipi;
+            textBoxYakitTipi.Text = _arac.YakitTipi;
+
+            pctBoxAracFoto.Image = _arac.Fotograf != null ? Image.FromStream(new MemoryStream(_arac.Fotograf)) : null;
+
+        }
+
+
+
+        private void silToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (lstBoxListe.SelectedItem == null) return;
+
+            var seciliArac = lstBoxListe.SelectedItem as Arac;
+            DialogResult result = MessageBox.Show($"{seciliArac.Model} aracýný silmek istiyor musunuz ", "Silme Onayý", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                //  lstKisiler.Items.Remove(seciliKisi);
+                _araclar.Remove(seciliArac);
+                lstBoxListe.DataSource = null;
+                lstBoxListe.DataSource = _araclar;
+                FormuTemizle();
+            }
+        }
+
+        private void güncelleToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -169,74 +211,6 @@ namespace AracTakipUygulamasi
             {
                 MessageBox.Show($"Bir hata oluþtu!!!! {ex.Message}");
 
-            }
-            btnKayit.Text = "Güncelle";
-        }
-
-        private void lstBoxListe_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (lstBoxListe.SelectedItem == null)
-            {
-                _arac = null;
-                return;
-            }
-
-            _arac = lstBoxListe.SelectedItem as Arac;
-
-            textBoxModel.Text = _arac.Model;
-            textBoxMarka.Text = _arac.Marka;
-            textBoxModelyili.Text = _arac.ModelYili;
-            textBoxMotorHacmi.Text = _arac.MotorHacmi;
-            textBoxSaseNo.Text = _arac.SaseNo;
-            textBoxVites.Text = _arac.VitesTipi;
-            textBoxYakitTipi.Text = _arac.YakitTipi;
-
-            pctBoxAracFoto.Image = _arac.Fotograf != null ? Image.FromStream(new MemoryStream(_arac.Fotograf)) : null;
-
-        }
-
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-    
-
-        private void düzenleToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxMarka_ControlRemoved(object sender, ControlEventArgs e)
-        {
-
-        }
-
-        private void silToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (lstBoxListe.SelectedItem == null) return;
-
-            var seciliArac = lstBoxListe.SelectedItem as Arac;
-            DialogResult result = MessageBox.Show($"{seciliArac.Model} aracýný silmek istiyor musunuz ", "Silme Onayý", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (result == DialogResult.Yes)
-            {
-                //  lstKisiler.Items.Remove(seciliKisi);
-                _araclar.Remove(seciliArac);
-                lstBoxListe.DataSource = null;
-                lstBoxListe.DataSource = _araclar;
-                FormuTemizle();
             }
         }
     }

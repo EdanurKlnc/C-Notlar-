@@ -83,7 +83,6 @@
             this.lblMarka.Size = new System.Drawing.Size(65, 19);
             this.lblMarka.TabIndex = 1;
             this.lblMarka.Text = "Marka :";
-            this.lblMarka.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblModel
             // 
@@ -151,9 +150,6 @@
             this.textBoxMarka.Name = "textBoxMarka";
             this.textBoxMarka.Size = new System.Drawing.Size(159, 23);
             this.textBoxMarka.TabIndex = 7;
-            this.textBoxMarka.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.textBoxMarka.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.textBoxMarka_ControlRemoved);
-            // 
             // textBoxModel
             // 
             this.textBoxModel.Location = new System.Drawing.Point(157, 143);
@@ -221,7 +217,6 @@
             this.düzenleToolStripMenuItem.Name = "düzenleToolStripMenuItem";
             this.düzenleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.düzenleToolStripMenuItem.Text = "Düzenle";
-            this.düzenleToolStripMenuItem.Click += new System.EventHandler(this.düzenleToolStripMenuItem_Click);
             // 
             // ekleToolStripMenuItem
             // 
@@ -241,6 +236,7 @@
             this.güncelleToolStripMenuItem.Name = "güncelleToolStripMenuItem";
             this.güncelleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.güncelleToolStripMenuItem.Text = "Güncelle";
+            this.güncelleToolStripMenuItem.Click += new System.EventHandler(this.güncelleToolStripMenuItem_Click_1);
             // 
             // lstBoxListe
             // 
@@ -327,7 +323,6 @@
             this.Controls.Add(this.btnKayit);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.cmsSil.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pctBoxAracFoto)).EndInit();
             this.ResumeLayout(false);
