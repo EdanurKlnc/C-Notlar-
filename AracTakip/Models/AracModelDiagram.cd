@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AracTakip.Arac">
+    <Position X="0.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAEAAAAAAAAAAAAAQAAQAAAABAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Arac.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AracTakip.BaseModel">
+    <Position X="2.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>BaseModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AracTakip.Marka">
+    <Position X="4.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAQAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Marka.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AracTakip.Model">
+    <Position X="2.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="AracTakip.KasaTipi">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIEAAAAgAACACAAAAAAABCgAAAACAAAAAAAAAAAAAEQ=</HashCode>
+      <FileName>KasaTipi.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AracTakip.VitesTipleri">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAIAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>VitesTipleri.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AracTakip.YakitTipleri">
+    <Position X="9.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAGAAAAAAAAAAAAABBA=</HashCode>
+      <FileName>YakitTipleri.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
