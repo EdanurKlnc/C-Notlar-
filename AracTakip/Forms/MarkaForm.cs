@@ -36,6 +36,8 @@ namespace AracTakip.Forms
                 lstList.DataSource = null;
                 lstList.DataSource = DataContext.Markalar;
                 DataHelper.Save(DataContext);
+                this.FormCleaner(Controls);
+
             }
             catch (Exception ex)
             {
@@ -89,6 +91,8 @@ namespace AracTakip.Forms
                 lstList.DataSource = null;
                 lstList.DataSource = DataContext.Markalar;
                 DataHelper.Save(DataContext);
+                this.FormCleaner(Controls);
+
             }
             catch (Exception ex)
             {
