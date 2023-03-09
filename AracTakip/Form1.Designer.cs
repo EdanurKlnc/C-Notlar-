@@ -32,6 +32,7 @@
             this.düzenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.markaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aracToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +50,8 @@
             // 
             this.düzenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.markaToolStripMenuItem,
-            this.modelToolStripMenuItem});
+            this.modelToolStripMenuItem,
+            this.aracToolStripMenuItem});
             this.düzenToolStripMenuItem.Name = "düzenToolStripMenuItem";
             this.düzenToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.düzenToolStripMenuItem.Text = "&Düzen";
@@ -66,8 +68,15 @@
             // 
             this.modelToolStripMenuItem.Name = "modelToolStripMenuItem";
             this.modelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.modelToolStripMenuItem.Text = "&Model";
+            this.modelToolStripMenuItem.Text = "M&odel";
             this.modelToolStripMenuItem.Click += new System.EventHandler(this.modelToolStripMenuItem_Click);
+            // 
+            // aracToolStripMenuItem
+            // 
+            this.aracToolStripMenuItem.Name = "aracToolStripMenuItem";
+            this.aracToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aracToolStripMenuItem.Text = "&Arac";
+            this.aracToolStripMenuItem.Click += new System.EventHandler(this.aracToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -94,5 +103,6 @@
         private ToolStripMenuItem düzenToolStripMenuItem;
         private ToolStripMenuItem markaToolStripMenuItem;
         private ToolStripMenuItem modelToolStripMenuItem;
+        private ToolStripMenuItem aracToolStripMenuItem;
     }
 }

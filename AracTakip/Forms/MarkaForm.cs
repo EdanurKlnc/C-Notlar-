@@ -30,6 +30,8 @@ namespace AracTakip.Forms
                 {
                     marka.Logo = (byte[])(new ImageConverter().ConvertTo(pbResim.Image, typeof(byte[])));
                 }
+                else
+                    marka.Logo = null;
                 DataContext.Markalar.Add(marka);
                 lstList.DataSource = null;
                 lstList.DataSource = DataContext.Markalar;
@@ -92,6 +94,11 @@ namespace AracTakip.Forms
             {
                 MessageBox.Show($"Bir hata oluştur: {ex.Message}");
             }
+        }
+
+        private void txtAd_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

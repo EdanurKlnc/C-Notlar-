@@ -111,6 +111,7 @@
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(205, 23);
             this.txtAd.TabIndex = 13;
+            this.txtAd.TextChanged += new System.EventHandler(this.txtAd_TextChanged);
             // 
             // label2
             // 

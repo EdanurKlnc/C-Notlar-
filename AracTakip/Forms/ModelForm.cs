@@ -30,15 +30,18 @@ namespace AracTakip.Forms
                 Model model = new()
                 {
                     Ad = txtAd.Text,
-                    KasaTipleri = (KasaTipleri)Enum.Parse(typeof(KasaTipleri),
-                    cmbKasaTipi.SelectedItem.ToString()),
-                    Marka = (Marka)cmbKasaTipi.SelectedItem
+                    KasaTipleri = (KasaTipleri)Enum.Parse(typeof(KasaTipleri), cmbKasaTipi.SelectedItem.ToString()),
+                    Marka = (Marka)cmbMarka.SelectedItem
                 };
 
+                DataContext.Modeller.Add(model);
+                lstList.DataSource = null;
+                lstList.DataSource = DataContext.Modeller;
+                DataHelper.Save(DataContext);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"hata : {ex.Message}");
+                MessageBox.Show($"Bir hata oluştu: {ex.Message}");
             }
         }
 
@@ -47,8 +50,8 @@ namespace AracTakip.Forms
             if (lstList.SelectedItem == null) return;
             Model model = (Model)lstList.SelectedItem;
             txtAd.Text = model.Ad;
-            cmbKasaTipi.SelectedItem = Enum.Parse(typeof(KasaTipleri), model.KasaTipleri.ToString());
-            cmbKasaTipi.SelectedItem = model.Marka;
+            cmbKasaTipi.SelectedItem = Enum.GetName(typeof(KasaTipleri), model.KasaTipleri);
+            cmbMarka.SelectedItem = DataContext.Markalar.Find(x => x.Id == model.Marka.Id);
         }
 
         private void txtGuncelle_Click(object sender, EventArgs e)
@@ -61,6 +64,11 @@ namespace AracTakip.Forms
             lstList.DataSource = null;
             lstList.DataSource = DataContext.Modeller;
             DataHelper.Save(DataContext);
+
+        }
+
+        private void txtAd_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

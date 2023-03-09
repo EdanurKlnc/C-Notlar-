@@ -18,6 +18,7 @@ namespace AracTakip
         private MarkaForm _markaForm;
         private ModelForm _modelForm;
         private EnvanterContext _dataContext;
+        private AracForm _aracForm;
         private void markaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (_markaForm == null || _markaForm.IsDisposed)
@@ -25,7 +26,7 @@ namespace AracTakip
                 _markaForm = new MarkaForm();
                 _markaForm.MdiParent = this;
                 _markaForm.Text = "Marka";
-                _markaForm.DataContext= _dataContext;
+                _markaForm.DataContext = _dataContext;
                 _markaForm.Show();
             }
 
@@ -43,10 +44,23 @@ namespace AracTakip
                 _modelForm.Show();
             }
         }
+        private void aracToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (_aracForm == null || _aracForm.IsDisposed)
+            {
+                _aracForm = new AracForm();
+                _aracForm.MdiParent = this;
+                _aracForm.Text = "Araç Formu";
+                _aracForm.DataContext = _dataContext;
+                _aracForm.Show();
+            }
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             var data = DataHelper.Load();
-            _dataContext = data  ?? new(); //data katmanýndan sonra JSON dan okuyacaðýz.
+            _dataContext = data ?? new(); //data katmanýndan sonra JSON dan okuyacaðýz.
         }
+
+
     }
 }
