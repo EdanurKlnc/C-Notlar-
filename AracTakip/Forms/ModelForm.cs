@@ -13,7 +13,7 @@ namespace AracTakip.Forms
 
         public EnvanterContext DataContext { get; set; }
 
-       // public List<Marka> Markalar { get; set; } = new();
+        // public List<Marka> Markalar { get; set; } = new();
 
         // public List<Model> Liste { get; set; } = new();
         private void ModelForm_Load(object sender, EventArgs e)
@@ -54,6 +54,21 @@ namespace AracTakip.Forms
             txtAd.Text = model.Ad;
             cmbKasaTipi.SelectedItem = Enum.GetName(typeof(KasaTipleri), model.KasaTipleri);
             cmbMarka.SelectedItem = DataContext.Markalar.Find(x => x.Id == model.Marka.Id);
+          /*  cmbMarka.SelectedItem = DataContext.Markalar.Find(x => x.Id == model.Marka.Id);
+
+            ////Func ile örnek bull bakkkkk yapppp!!!!!!!!!!!
+
+            Func<bool, Marka> SearchMarkaFunc = (bool condition) => //kendimiz oluşturuyoruz.
+          {
+              foreach (var item in DataContext.Markalar)
+              {
+                  if (condition)
+                  {
+                      return item;
+                  }
+              }
+              return null;
+          };*/
         }
 
         private void txtGuncelle_Click(object sender, EventArgs e)

@@ -48,7 +48,7 @@ namespace AracTakip.Forms
                 lstListe.DataSource = null;
                 lstListe.DataSource = DataContext.Araclar;
                 DataHelper.Save(DataContext);
-                this.FormCleaner(Controls);
+                this.FormCleaner(Controls); //extention methot oluşturup burada kullanıyoruz.
 
 
             }
