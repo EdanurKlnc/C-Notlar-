@@ -8,9 +8,6 @@ namespace InterfaceOdemeSistemi
         {
             InitializeComponent();
         }
-
-
-
         private void btnKrediKartiOde_Click(object sender, EventArgs e)
         {
             KrediKartiyleOdeme odeme = new KrediKartiyleOdeme()
@@ -21,11 +18,11 @@ namespace InterfaceOdemeSistemi
                 SonKullanimYil = Convert.ToByte(kartSonYil.Text),
                 SonKullanimAy = Convert.ToByte(kartSonAy.Text),
                 CVC = Convert.ToInt32(txtCvc.Text),
-                
-        };
+
+            };
             MessageBox.Show(odeme.OdemeYap());
             groupBoxKrediKartiTemizle();
-           
+
         }
 
         private void checkBoxKapidaOdeme_CheckedChanged(object sender, EventArgs e)
