@@ -39,8 +39,8 @@ namespace InterfaceOrnek
         {
             //gönderici(sender) kim? bun belirleyip iþleme devam edeceðiz
             string islemAdi = "";
-            if (((Button)sender).Name.Contains("cevre"))
-                islemAdi = "cevre";
+            if (((Button)sender).Name.Contains("Cevre"))
+                islemAdi = "Cevre";
             if (((Button)sender).Name == "btnAlanHesapla")
                 islemAdi = "Alan";
 
@@ -56,7 +56,7 @@ namespace InterfaceOrnek
                 double sonuc = 0;
                 switch (islemAdi)
                 {
-                    case "cevre":
+                    case "Cevre":
                         sonuc = dikdortgen.CevreHesapla();
                         break;
                     case "Alan ":
@@ -77,7 +77,7 @@ namespace InterfaceOrnek
 
                 switch (islemAdi)
                 {
-                    case "cevre":
+                    case "Cevre":
                         sonuc = kare.CevreHesapla();
                         break;
                     case "Alan ":
