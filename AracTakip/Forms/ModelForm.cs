@@ -11,11 +11,12 @@ namespace AracTakip.Forms
             InitializeComponent();
         }
 
-        public EnvanterContext DataContext { get; set; }
-
         // public List<Marka> Markalar { get; set; } = new();
 
         // public List<Model> Liste { get; set; } = new();
+        public EnvanterContext DataContext { get; set; }
+
+
         private void ModelForm_Load(object sender, EventArgs e)
         {
             cmbKasaTipi.DataSource = Enum.GetNames(typeof(KasaTipleri));
@@ -54,21 +55,21 @@ namespace AracTakip.Forms
             txtAd.Text = model.Ad;
             cmbKasaTipi.SelectedItem = Enum.GetName(typeof(KasaTipleri), model.KasaTipleri);
             cmbMarka.SelectedItem = DataContext.Markalar.Find(x => x.Id == model.Marka.Id);
-          /*  cmbMarka.SelectedItem = DataContext.Markalar.Find(x => x.Id == model.Marka.Id);
+            /*  cmbMarka.SelectedItem = DataContext.Markalar.Find(x => x.Id == model.Marka.Id);
 
-            ////Func ile örnek bull bakkkkk yapppp!!!!!!!!!!!
+              ////Func ile örnek bull bakkkkk yapppp!!!!!!!!!!!
 
-            Func<bool, Marka> SearchMarkaFunc = (bool condition) => //kendimiz oluşturuyoruz.
-          {
-              foreach (var item in DataContext.Markalar)
-              {
-                  if (condition)
-                  {
-                      return item;
-                  }
-              }
-              return null;
-          };*/
+              Func<bool, Marka> SearchMarkaFunc = (bool condition) => //kendimiz oluşturuyoruz.
+            {
+                foreach (var item in DataContext.Markalar)
+                {
+                    if (condition)
+                    {
+                        return item;
+                    }
+                }
+                return null;
+            };*/
         }
 
         private void txtGuncelle_Click(object sender, EventArgs e)
@@ -87,6 +88,11 @@ namespace AracTakip.Forms
         }
 
         private void txtAd_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbMarka_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

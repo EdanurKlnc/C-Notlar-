@@ -10,31 +10,6 @@ namespace WFormGiris
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FormKisiler_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnKayit_Click(object sender, EventArgs e)
         {
             if (_seciliKisi == null)
@@ -61,9 +36,9 @@ namespace WFormGiris
                         //Email = txtMail.Text,
                         Tel = txtTelefonNo.Text,
                         Tc = txtTc.Text,
-                       
+
                     };
-                    if(_memoryStream.Length > 0)
+                    if (_memoryStream.Length > 0)
                     {
                         kisi.Fotograf = _memoryStream.ToArray();
 
@@ -223,15 +198,6 @@ namespace WFormGiris
             }
             //dosyaAc.ShowDialog();
         }
-        private void txtAra_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dtpDogumTarihi_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void dışarıAktarToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -240,7 +206,7 @@ namespace WFormGiris
             dosyaKaydet.Filter = "xml";
             dosyaKaydet.FileName = "kişiler.xml";
             dosyaKaydet.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            if(dosyaKaydet.ShowDialog() == DialogResult.OK)
+            if (dosyaKaydet.ShowDialog() == DialogResult.OK)
             {
                 XmlSerializer serializer = new XmlSerializer(typeof(List<Kisi>));
                 TextWriter textWriter = new StreamWriter(dosyaKaydet.FileName);
@@ -251,9 +217,5 @@ namespace WFormGiris
             }
         }
 
-        private void contextMenuStrip1_Opening(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-
-        }
     }
 }

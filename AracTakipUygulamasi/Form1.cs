@@ -141,7 +141,7 @@ namespace AracTakipUygulamasi
             }
         }
 
-      
+
         private void lstBoxListe_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lstBoxListe.SelectedItem == null)

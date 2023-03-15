@@ -28,306 +28,302 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.btnKayit = new System.Windows.Forms.Button();
-            this.lblMarka = new System.Windows.Forms.Label();
-            this.lblModel = new System.Windows.Forms.Label();
-            this.lblSase = new System.Windows.Forms.Label();
-            this.lblYakitTipi = new System.Windows.Forms.Label();
-            this.lblVitesTipi = new System.Windows.Forms.Label();
-            this.lblMotorHacmi = new System.Windows.Forms.Label();
-            this.textBoxMarka = new System.Windows.Forms.TextBox();
-            this.textBoxModel = new System.Windows.Forms.TextBox();
-            this.textBoxYakitTipi = new System.Windows.Forms.TextBox();
-            this.textBoxVites = new System.Windows.Forms.TextBox();
-            this.textBoxMotorHacmi = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblFotograf = new System.Windows.Forms.Label();
-            this.cmsSil = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.düzenleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ekleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.silToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.güncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lstBoxListe = new System.Windows.Forms.ListBox();
-            this.lblModelYili = new System.Windows.Forms.Label();
-            this.textBoxModelyili = new System.Windows.Forms.TextBox();
-            this.textBoxSaseNo = new System.Windows.Forms.TextBox();
-            this.pctBoxAracFoto = new System.Windows.Forms.PictureBox();
-            this.dosyaAc = new System.Windows.Forms.OpenFileDialog();
-            this.dosyaKaydet = new System.Windows.Forms.SaveFileDialog();
-            this.cmsSil.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctBoxAracFoto)).BeginInit();
-            this.SuspendLayout();
+            btnKayit = new Button();
+            lblMarka = new Label();
+            lblModel = new Label();
+            lblSase = new Label();
+            lblYakitTipi = new Label();
+            lblVitesTipi = new Label();
+            lblMotorHacmi = new Label();
+            textBoxMarka = new TextBox();
+            textBoxModel = new TextBox();
+            textBoxYakitTipi = new TextBox();
+            textBoxVites = new TextBox();
+            textBoxMotorHacmi = new TextBox();
+            label1 = new Label();
+            lblFotograf = new Label();
+            cmsSil = new ContextMenuStrip(components);
+            düzenleToolStripMenuItem = new ToolStripMenuItem();
+            ekleToolStripMenuItem = new ToolStripMenuItem();
+            silToolStripMenuItem = new ToolStripMenuItem();
+            güncelleToolStripMenuItem = new ToolStripMenuItem();
+            lstBoxListe = new ListBox();
+            lblModelYili = new Label();
+            textBoxModelyili = new TextBox();
+            textBoxSaseNo = new TextBox();
+            pctBoxAracFoto = new PictureBox();
+            dosyaAc = new OpenFileDialog();
+            dosyaKaydet = new SaveFileDialog();
+            cmsSil.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pctBoxAracFoto).BeginInit();
+            SuspendLayout();
             // 
             // btnKayit
             // 
-            this.btnKayit.BackColor = System.Drawing.Color.White;
-            this.btnKayit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnKayit.Location = new System.Drawing.Point(381, 330);
-            this.btnKayit.Name = "btnKayit";
-            this.btnKayit.Size = new System.Drawing.Size(159, 42);
-            this.btnKayit.TabIndex = 0;
-            this.btnKayit.Text = "Kaydet";
-            this.btnKayit.UseVisualStyleBackColor = false;
-            this.btnKayit.Click += new System.EventHandler(this.btnKayit_Click);
+            btnKayit.BackColor = Color.White;
+            btnKayit.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnKayit.Location = new Point(381, 330);
+            btnKayit.Name = "btnKayit";
+            btnKayit.Size = new Size(159, 42);
+            btnKayit.TabIndex = 0;
+            btnKayit.Text = "Kaydet";
+            btnKayit.UseVisualStyleBackColor = false;
+            btnKayit.Click += btnKayit_Click;
             // 
             // lblMarka
             // 
-            this.lblMarka.AutoSize = true;
-            this.lblMarka.BackColor = System.Drawing.Color.White;
-            this.lblMarka.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblMarka.ForeColor = System.Drawing.Color.Black;
-            this.lblMarka.Location = new System.Drawing.Point(75, 101);
-            this.lblMarka.Name = "lblMarka";
-            this.lblMarka.Size = new System.Drawing.Size(65, 19);
-            this.lblMarka.TabIndex = 1;
-            this.lblMarka.Text = "Marka :";
+            lblMarka.AutoSize = true;
+            lblMarka.BackColor = Color.White;
+            lblMarka.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblMarka.ForeColor = Color.Black;
+            lblMarka.Location = new Point(75, 101);
+            lblMarka.Name = "lblMarka";
+            lblMarka.Size = new Size(65, 19);
+            lblMarka.TabIndex = 1;
+            lblMarka.Text = "Marka :";
             // 
             // lblModel
             // 
-            this.lblModel.AutoSize = true;
-            this.lblModel.BackColor = System.Drawing.Color.White;
-            this.lblModel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblModel.ForeColor = System.Drawing.Color.Black;
-            this.lblModel.Location = new System.Drawing.Point(78, 143);
-            this.lblModel.Name = "lblModel";
-            this.lblModel.Size = new System.Drawing.Size(62, 19);
-            this.lblModel.TabIndex = 2;
-            this.lblModel.Text = "Model :";
+            lblModel.AutoSize = true;
+            lblModel.BackColor = Color.White;
+            lblModel.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblModel.ForeColor = Color.Black;
+            lblModel.Location = new Point(78, 143);
+            lblModel.Name = "lblModel";
+            lblModel.Size = new Size(62, 19);
+            lblModel.TabIndex = 2;
+            lblModel.Text = "Model :";
             // 
             // lblSase
             // 
-            this.lblSase.AutoSize = true;
-            this.lblSase.BackColor = System.Drawing.Color.White;
-            this.lblSase.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblSase.ForeColor = System.Drawing.Color.Black;
-            this.lblSase.Location = new System.Drawing.Point(66, 227);
-            this.lblSase.Name = "lblSase";
-            this.lblSase.Size = new System.Drawing.Size(74, 19);
-            this.lblSase.TabIndex = 3;
-            this.lblSase.Text = "Şase No :";
+            lblSase.AutoSize = true;
+            lblSase.BackColor = Color.White;
+            lblSase.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblSase.ForeColor = Color.Black;
+            lblSase.Location = new Point(66, 227);
+            lblSase.Name = "lblSase";
+            lblSase.Size = new Size(74, 19);
+            lblSase.TabIndex = 3;
+            lblSase.Text = "Şase No :";
             // 
             // lblYakitTipi
             // 
-            this.lblYakitTipi.AutoSize = true;
-            this.lblYakitTipi.BackColor = System.Drawing.Color.White;
-            this.lblYakitTipi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblYakitTipi.ForeColor = System.Drawing.Color.Black;
-            this.lblYakitTipi.Location = new System.Drawing.Point(58, 269);
-            this.lblYakitTipi.Name = "lblYakitTipi";
-            this.lblYakitTipi.Size = new System.Drawing.Size(82, 19);
-            this.lblYakitTipi.TabIndex = 4;
-            this.lblYakitTipi.Text = "Yakıt Tipi :";
+            lblYakitTipi.AutoSize = true;
+            lblYakitTipi.BackColor = Color.White;
+            lblYakitTipi.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblYakitTipi.ForeColor = Color.Black;
+            lblYakitTipi.Location = new Point(58, 269);
+            lblYakitTipi.Name = "lblYakitTipi";
+            lblYakitTipi.Size = new Size(82, 19);
+            lblYakitTipi.TabIndex = 4;
+            lblYakitTipi.Text = "Yakıt Tipi :";
             // 
             // lblVitesTipi
             // 
-            this.lblVitesTipi.AutoSize = true;
-            this.lblVitesTipi.BackColor = System.Drawing.Color.White;
-            this.lblVitesTipi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblVitesTipi.ForeColor = System.Drawing.Color.Black;
-            this.lblVitesTipi.Location = new System.Drawing.Point(58, 311);
-            this.lblVitesTipi.Name = "lblVitesTipi";
-            this.lblVitesTipi.Size = new System.Drawing.Size(82, 19);
-            this.lblVitesTipi.TabIndex = 5;
-            this.lblVitesTipi.Text = "Vites Tipi :";
+            lblVitesTipi.AutoSize = true;
+            lblVitesTipi.BackColor = Color.White;
+            lblVitesTipi.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblVitesTipi.ForeColor = Color.Black;
+            lblVitesTipi.Location = new Point(58, 311);
+            lblVitesTipi.Name = "lblVitesTipi";
+            lblVitesTipi.Size = new Size(82, 19);
+            lblVitesTipi.TabIndex = 5;
+            lblVitesTipi.Text = "Vites Tipi :";
             // 
             // lblMotorHacmi
             // 
-            this.lblMotorHacmi.AutoSize = true;
-            this.lblMotorHacmi.BackColor = System.Drawing.Color.White;
-            this.lblMotorHacmi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblMotorHacmi.ForeColor = System.Drawing.Color.Black;
-            this.lblMotorHacmi.Location = new System.Drawing.Point(32, 353);
-            this.lblMotorHacmi.Name = "lblMotorHacmi";
-            this.lblMotorHacmi.Size = new System.Drawing.Size(108, 19);
-            this.lblMotorHacmi.TabIndex = 6;
-            this.lblMotorHacmi.Text = "Motor Hacmi :";
+            lblMotorHacmi.AutoSize = true;
+            lblMotorHacmi.BackColor = Color.White;
+            lblMotorHacmi.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblMotorHacmi.ForeColor = Color.Black;
+            lblMotorHacmi.Location = new Point(32, 353);
+            lblMotorHacmi.Name = "lblMotorHacmi";
+            lblMotorHacmi.Size = new Size(108, 19);
+            lblMotorHacmi.TabIndex = 6;
+            lblMotorHacmi.Text = "Motor Hacmi :";
             // 
             // textBoxMarka
             // 
-            this.textBoxMarka.Location = new System.Drawing.Point(157, 101);
-            this.textBoxMarka.Name = "textBoxMarka";
-            this.textBoxMarka.Size = new System.Drawing.Size(159, 23);
-            this.textBoxMarka.TabIndex = 7;
+            textBoxMarka.Location = new Point(157, 101);
+            textBoxMarka.Name = "textBoxMarka";
+            textBoxMarka.Size = new Size(159, 23);
+            textBoxMarka.TabIndex = 7;
+            // 
             // textBoxModel
             // 
-            this.textBoxModel.Location = new System.Drawing.Point(157, 143);
-            this.textBoxModel.Name = "textBoxModel";
-            this.textBoxModel.Size = new System.Drawing.Size(159, 23);
-            this.textBoxModel.TabIndex = 8;
+            textBoxModel.Location = new Point(157, 143);
+            textBoxModel.Name = "textBoxModel";
+            textBoxModel.Size = new Size(159, 23);
+            textBoxModel.TabIndex = 8;
             // 
             // textBoxYakitTipi
             // 
-            this.textBoxYakitTipi.Location = new System.Drawing.Point(157, 265);
-            this.textBoxYakitTipi.Name = "textBoxYakitTipi";
-            this.textBoxYakitTipi.Size = new System.Drawing.Size(159, 23);
-            this.textBoxYakitTipi.TabIndex = 9;
+            textBoxYakitTipi.Location = new Point(157, 265);
+            textBoxYakitTipi.Name = "textBoxYakitTipi";
+            textBoxYakitTipi.Size = new Size(159, 23);
+            textBoxYakitTipi.TabIndex = 9;
             // 
             // textBoxVites
             // 
-            this.textBoxVites.Location = new System.Drawing.Point(157, 307);
-            this.textBoxVites.Name = "textBoxVites";
-            this.textBoxVites.Size = new System.Drawing.Size(159, 23);
-            this.textBoxVites.TabIndex = 10;
+            textBoxVites.Location = new Point(157, 307);
+            textBoxVites.Name = "textBoxVites";
+            textBoxVites.Size = new Size(159, 23);
+            textBoxVites.TabIndex = 10;
             // 
             // textBoxMotorHacmi
             // 
-            this.textBoxMotorHacmi.Location = new System.Drawing.Point(157, 349);
-            this.textBoxMotorHacmi.Name = "textBoxMotorHacmi";
-            this.textBoxMotorHacmi.Size = new System.Drawing.Size(159, 23);
-            this.textBoxMotorHacmi.TabIndex = 11;
+            textBoxMotorHacmi.Location = new Point(157, 349);
+            textBoxMotorHacmi.Name = "textBoxMotorHacmi";
+            textBoxMotorHacmi.Size = new Size(159, 23);
+            textBoxMotorHacmi.TabIndex = 11;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(370, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 31);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "ARAÇ TAKİP";
+            label1.AutoSize = true;
+            label1.BackColor = Color.White;
+            label1.BorderStyle = BorderStyle.FixedSingle;
+            label1.Font = new Font("Trebuchet MS", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label1.Location = new Point(370, 36);
+            label1.Name = "label1";
+            label1.Size = new Size(148, 31);
+            label1.TabIndex = 13;
+            label1.Text = "ARAÇ TAKİP";
             // 
             // lblFotograf
             // 
-            this.lblFotograf.AutoSize = true;
-            this.lblFotograf.BackColor = System.Drawing.Color.White;
-            this.lblFotograf.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblFotograf.Location = new System.Drawing.Point(358, 174);
-            this.lblFotograf.Name = "lblFotograf";
-            this.lblFotograf.Size = new System.Drawing.Size(240, 17);
-            this.lblFotograf.TabIndex = 14;
-            this.lblFotograf.Text = "Araç Fotoğrafı Eklemek İçin Tıklayınız";
+            lblFotograf.AutoSize = true;
+            lblFotograf.BackColor = Color.White;
+            lblFotograf.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lblFotograf.Location = new Point(358, 174);
+            lblFotograf.Name = "lblFotograf";
+            lblFotograf.Size = new Size(240, 17);
+            lblFotograf.TabIndex = 14;
+            lblFotograf.Text = "Araç Fotoğrafı Eklemek İçin Tıklayınız";
             // 
             // cmsSil
             // 
-            this.cmsSil.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.düzenleToolStripMenuItem});
-            this.cmsSil.Name = "contextMenuStrip1";
-            this.cmsSil.Size = new System.Drawing.Size(181, 48);
+            cmsSil.Items.AddRange(new ToolStripItem[] { düzenleToolStripMenuItem });
+            cmsSil.Name = "contextMenuStrip1";
+            cmsSil.Size = new Size(181, 48);
             // 
             // düzenleToolStripMenuItem
             // 
-            this.düzenleToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ekleToolStripMenuItem,
-            this.silToolStripMenuItem,
-            this.güncelleToolStripMenuItem});
-            this.düzenleToolStripMenuItem.Name = "düzenleToolStripMenuItem";
-            this.düzenleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.düzenleToolStripMenuItem.Text = "Düzenle";
+            düzenleToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { ekleToolStripMenuItem, silToolStripMenuItem, güncelleToolStripMenuItem });
+            düzenleToolStripMenuItem.Name = "düzenleToolStripMenuItem";
+            düzenleToolStripMenuItem.Size = new Size(180, 22);
+            düzenleToolStripMenuItem.Text = "Düzenle";
             // 
             // ekleToolStripMenuItem
             // 
-            this.ekleToolStripMenuItem.Name = "ekleToolStripMenuItem";
-            this.ekleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.ekleToolStripMenuItem.Text = "Ekle";
+            ekleToolStripMenuItem.Name = "ekleToolStripMenuItem";
+            ekleToolStripMenuItem.Size = new Size(180, 22);
+            ekleToolStripMenuItem.Text = "Ekle";
             // 
             // silToolStripMenuItem
             // 
-            this.silToolStripMenuItem.Name = "silToolStripMenuItem";
-            this.silToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.silToolStripMenuItem.Text = "Sil";
-            this.silToolStripMenuItem.Click += new System.EventHandler(this.silToolStripMenuItem_Click);
+            silToolStripMenuItem.Name = "silToolStripMenuItem";
+            silToolStripMenuItem.Size = new Size(180, 22);
+            silToolStripMenuItem.Text = "Sil";
+            silToolStripMenuItem.Click += silToolStripMenuItem_Click;
             // 
             // güncelleToolStripMenuItem
             // 
-            this.güncelleToolStripMenuItem.Name = "güncelleToolStripMenuItem";
-            this.güncelleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.güncelleToolStripMenuItem.Text = "Güncelle";
-            this.güncelleToolStripMenuItem.Click += new System.EventHandler(this.güncelleToolStripMenuItem_Click_1);
+            güncelleToolStripMenuItem.Name = "güncelleToolStripMenuItem";
+            güncelleToolStripMenuItem.Size = new Size(180, 22);
+            güncelleToolStripMenuItem.Text = "Güncelle";
+            güncelleToolStripMenuItem.Click += güncelleToolStripMenuItem_Click_1;
             // 
             // lstBoxListe
             // 
-            this.lstBoxListe.BackColor = System.Drawing.Color.White;
-            this.lstBoxListe.ContextMenuStrip = this.cmsSil;
-            this.lstBoxListe.FormattingEnabled = true;
-            this.lstBoxListe.ItemHeight = 15;
-            this.lstBoxListe.Location = new System.Drawing.Point(633, 101);
-            this.lstBoxListe.Name = "lstBoxListe";
-            this.lstBoxListe.Size = new System.Drawing.Size(257, 169);
-            this.lstBoxListe.TabIndex = 15;
-            this.lstBoxListe.SelectedIndexChanged += new System.EventHandler(this.lstBoxListe_SelectedIndexChanged);
+            lstBoxListe.BackColor = Color.White;
+            lstBoxListe.ContextMenuStrip = cmsSil;
+            lstBoxListe.FormattingEnabled = true;
+            lstBoxListe.ItemHeight = 15;
+            lstBoxListe.Location = new Point(633, 101);
+            lstBoxListe.Name = "lstBoxListe";
+            lstBoxListe.Size = new Size(257, 169);
+            lstBoxListe.TabIndex = 15;
+            lstBoxListe.SelectedIndexChanged += lstBoxListe_SelectedIndexChanged;
             // 
             // lblModelYili
             // 
-            this.lblModelYili.AutoSize = true;
-            this.lblModelYili.BackColor = System.Drawing.Color.White;
-            this.lblModelYili.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblModelYili.Location = new System.Drawing.Point(58, 185);
-            this.lblModelYili.Name = "lblModelYili";
-            this.lblModelYili.Size = new System.Drawing.Size(87, 19);
-            this.lblModelYili.TabIndex = 16;
-            this.lblModelYili.Text = "Model Yılı :";
+            lblModelYili.AutoSize = true;
+            lblModelYili.BackColor = Color.White;
+            lblModelYili.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblModelYili.Location = new Point(58, 185);
+            lblModelYili.Name = "lblModelYili";
+            lblModelYili.Size = new Size(87, 19);
+            lblModelYili.TabIndex = 16;
+            lblModelYili.Text = "Model Yılı :";
             // 
             // textBoxModelyili
             // 
-            this.textBoxModelyili.Location = new System.Drawing.Point(157, 185);
-            this.textBoxModelyili.Name = "textBoxModelyili";
-            this.textBoxModelyili.Size = new System.Drawing.Size(159, 23);
-            this.textBoxModelyili.TabIndex = 17;
+            textBoxModelyili.Location = new Point(157, 185);
+            textBoxModelyili.Name = "textBoxModelyili";
+            textBoxModelyili.Size = new Size(159, 23);
+            textBoxModelyili.TabIndex = 17;
             // 
             // textBoxSaseNo
             // 
-            this.textBoxSaseNo.Location = new System.Drawing.Point(157, 223);
-            this.textBoxSaseNo.Name = "textBoxSaseNo";
-            this.textBoxSaseNo.Size = new System.Drawing.Size(159, 23);
-            this.textBoxSaseNo.TabIndex = 18;
+            textBoxSaseNo.Location = new Point(157, 223);
+            textBoxSaseNo.Name = "textBoxSaseNo";
+            textBoxSaseNo.Size = new Size(159, 23);
+            textBoxSaseNo.TabIndex = 18;
             // 
             // pctBoxAracFoto
             // 
-            this.pctBoxAracFoto.BackColor = System.Drawing.Color.White;
-            this.pctBoxAracFoto.Location = new System.Drawing.Point(348, 101);
-            this.pctBoxAracFoto.Name = "pctBoxAracFoto";
-            this.pctBoxAracFoto.Size = new System.Drawing.Size(267, 167);
-            this.pctBoxAracFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pctBoxAracFoto.TabIndex = 12;
-            this.pctBoxAracFoto.TabStop = false;
-            this.pctBoxAracFoto.Click += new System.EventHandler(this.pctBoxAracFoto_Click);
+            pctBoxAracFoto.BackColor = Color.White;
+            pctBoxAracFoto.Location = new Point(348, 101);
+            pctBoxAracFoto.Name = "pctBoxAracFoto";
+            pctBoxAracFoto.Size = new Size(267, 167);
+            pctBoxAracFoto.SizeMode = PictureBoxSizeMode.StretchImage;
+            pctBoxAracFoto.TabIndex = 12;
+            pctBoxAracFoto.TabStop = false;
+            pctBoxAracFoto.Click += pctBoxAracFoto_Click;
             // 
             // dosyaAc
             // 
-            this.dosyaAc.FileName = "dosya";
+            dosyaAc.FileName = "dosya";
             // 
             // dosyaKaydet
             // 
-            this.dosyaKaydet.FileName = "dosyaKaydet";
+            dosyaKaydet.FileName = "dosyaKaydet";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(15)))), ((int)(((byte)(30)))));
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(913, 450);
-            this.Controls.Add(this.textBoxSaseNo);
-            this.Controls.Add(this.textBoxModelyili);
-            this.Controls.Add(this.lblModelYili);
-            this.Controls.Add(this.lstBoxListe);
-            this.Controls.Add(this.lblFotograf);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pctBoxAracFoto);
-            this.Controls.Add(this.textBoxMotorHacmi);
-            this.Controls.Add(this.textBoxVites);
-            this.Controls.Add(this.textBoxYakitTipi);
-            this.Controls.Add(this.textBoxModel);
-            this.Controls.Add(this.textBoxMarka);
-            this.Controls.Add(this.lblMotorHacmi);
-            this.Controls.Add(this.lblVitesTipi);
-            this.Controls.Add(this.lblYakitTipi);
-            this.Controls.Add(this.lblSase);
-            this.Controls.Add(this.lblModel);
-            this.Controls.Add(this.lblMarka);
-            this.Controls.Add(this.btnKayit);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.cmsSil.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pctBoxAracFoto)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(140, 15, 30);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.None;
+            ClientSize = new Size(913, 450);
+            Controls.Add(textBoxSaseNo);
+            Controls.Add(textBoxModelyili);
+            Controls.Add(lblModelYili);
+            Controls.Add(lstBoxListe);
+            Controls.Add(lblFotograf);
+            Controls.Add(label1);
+            Controls.Add(pctBoxAracFoto);
+            Controls.Add(textBoxMotorHacmi);
+            Controls.Add(textBoxVites);
+            Controls.Add(textBoxYakitTipi);
+            Controls.Add(textBoxModel);
+            Controls.Add(textBoxMarka);
+            Controls.Add(lblMotorHacmi);
+            Controls.Add(lblVitesTipi);
+            Controls.Add(lblYakitTipi);
+            Controls.Add(lblSase);
+            Controls.Add(lblModel);
+            Controls.Add(lblMarka);
+            Controls.Add(btnKayit);
+            Name = "Form1";
+            Text = "Form1";
+            cmsSil.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pctBoxAracFoto).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
