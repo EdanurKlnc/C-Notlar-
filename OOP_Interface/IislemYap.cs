@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace OOP_Interface
 {
+    //İNTERNAL ===> BULUNDUĞU PROJE İÇERİSİNDEN ERİŞİM SAĞLAR
     internal interface IislemYap
     {
+        void IslemSonucunuYazdir(); //void geriye bir şey döndürmez
+       
+
     }
 }
