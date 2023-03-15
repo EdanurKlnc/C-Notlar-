@@ -10,16 +10,16 @@ namespace InterfaceOdemeSistemi
         }
         private void btnKrediKartiOde_Click(object sender, EventArgs e)
         {
-            KrediKartiyleOdeme odeme = new KrediKartiyleOdeme()
-            {
-                OdenecekTutar = Convert.ToDecimal(lblTutar.Text),
-                KartSahibi = txtKartSahibi.Text,
-                KartNumarasi = maskedtxtKartNo.Text,
-                SonKullanimYil = Convert.ToByte(kartSonYil.Text),
-                SonKullanimAy = Convert.ToByte(kartSonAy.Text),
-                CVC = Convert.ToInt32(txtCvc.Text),
+            KrediKartiyleOdeme odeme = new KrediKartiyleOdeme();
 
-            };
+            odeme.OdenecekTutar = Convert.ToDecimal(lblTutar.Text);
+                odeme.KartSahibi = txtKartSahibi.Text;
+                odeme.KartNumarasi = maskedtxtKartNo.Text;
+                odeme.SonKullanimYil = Convert.ToByte(kartSonYil.Text);
+                odeme.SonKullanimAy = Convert.ToByte(kartSonAy.Text);
+                odeme.CVC = Convert.ToInt32(txtCvc.Text);
+
+          
             MessageBox.Show(odeme.OdemeYap());
             groupBoxKrediKartiTemizle();
 
