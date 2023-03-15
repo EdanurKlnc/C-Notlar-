@@ -81,6 +81,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP_Interface", "OOP_Interf
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceOrnek", "InterfaceOrnek\InterfaceOrnek.csproj", "{F601F882-4370-493F-BAAE-8FF5E5340810}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceOdemeSistemi", "InterfaceOdemeSistemi\InterfaceOdemeSistemi.csproj", "{25E557C4-1861-4168-9685-BFA88707BC15}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -183,6 +185,10 @@ Global
 		{F601F882-4370-493F-BAAE-8FF5E5340810}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F601F882-4370-493F-BAAE-8FF5E5340810}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F601F882-4370-493F-BAAE-8FF5E5340810}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25E557C4-1861-4168-9685-BFA88707BC15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25E557C4-1861-4168-9685-BFA88707BC15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25E557C4-1861-4168-9685-BFA88707BC15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25E557C4-1861-4168-9685-BFA88707BC15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -214,6 +220,7 @@ Global
 		{155E623E-4980-41A5-9842-C5791C69721B} = {2A261F4C-3EDD-471D-A16C-9AFA902F309C}
 		{94C36FB9-BAB5-44A7-9C0B-B6EE623D7988} = {D2E91662-7126-4F99-904A-9D59773798EE}
 		{F601F882-4370-493F-BAAE-8FF5E5340810} = {D2E91662-7126-4F99-904A-9D59773798EE}
+		{25E557C4-1861-4168-9685-BFA88707BC15} = {D2E91662-7126-4F99-904A-9D59773798EE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {15B4EFE1-3878-43BF-9E15-16E860CECA76}
