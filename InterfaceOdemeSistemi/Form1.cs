@@ -1,4 +1,5 @@
 using InterfaceOdemeSistemi.Entities;
+using InterfaceOrnek_Odeme.Entities;
 
 namespace InterfaceOdemeSistemi
 {
@@ -10,16 +11,16 @@ namespace InterfaceOdemeSistemi
         }
         private void btnKrediKartiOde_Click(object sender, EventArgs e)
         {
-            KrediKartiyleOdeme odeme = new KrediKartiyleOdeme();
+            KrediKartiylaOdeme odeme = new KrediKartiylaOdeme();
 
             odeme.OdenecekTutar = Convert.ToDecimal(lblTutar.Text);
-                odeme.KartSahibi = txtKartSahibi.Text;
-                odeme.KartNumarasi = maskedtxtKartNo.Text;
-                odeme.SonKullanimYil = Convert.ToByte(kartSonYil.Text);
-                odeme.SonKullanimAy = Convert.ToByte(kartSonAy.Text);
-                odeme.CVC = Convert.ToInt32(txtCvc.Text);
+            odeme.KartSahibi = txtKartSahibi.Text;
+            odeme.KartNumarasi = maskedtxtKartNo.Text;
+            odeme.SonKullanimYil = Convert.ToByte(kartSonYil.Text);
+            odeme.SonKullanimAy = Convert.ToByte(kartSonAy.Text);
+            odeme.CVC = Convert.ToInt32(txtCvc.Text);
 
-          
+
             MessageBox.Show(odeme.OdemeYap());
             groupBoxKrediKartiTemizle();
 
